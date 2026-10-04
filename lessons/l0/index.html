@@ -8,24 +8,46 @@
 </head>
 <body>
     <header>
-        <!-- TODO: добавьте навигацию по разделам страницы -->
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#contact">Контакты</a>
+        </nav>
     </header>
 
     <main>
-        <section class="starter-note" aria-labelledby="starter-title">
-            <h1 id="starter-title">Стартовая страница нулевого занятия</h1>
-            <p>Замените этот блок содержимым портфолио фотографа по заданию в README.</p>
+        <section id="about">
+            <div class="about-container">
+                <img src="images/about.jpeg" alt="Анна Аннушкина" class="about-photo">
+                <div class="about-text">
+                    <h1>Анна Аннушкина</h1>
+                    <p>Свадебный и природный фотограф с 10-летним стажем. Ловлю искренние эмоции и красоту окружающего мира.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- TODO: добавьте раздел с информацией о фотографе -->
+        <section id="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <img src="images/nature_1.jpg" alt="Природа 1">
+                <img src="images/nature_2.jpg" alt="Природа 2">
+                <img src="images/portrait_1.jpg" alt="Портрет 1">
+                <img src="images/portrait_2.jpg" alt="Портрет 2">
+                <img src="images/wedding_1.jpg" alt="Свадьба 1">
+                <img src="images/wedding_2.jpg" alt="Свадьба 2">
+            </div>
+        </section>
 
-        <!-- TODO: добавьте галерею из локальных изображений -->
-
-        <!-- TODO: добавьте контактную информацию -->
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Email: anna@photo.ru</p>
+            <p>Телефон: +7 (999) 123-45-67</p>
+            <p>Мессенджер макс: @anna_photo</p>
+        </section>
     </main>
 
     <footer>
-        <!-- TODO: добавьте подвал страницы -->
+        <p> 2026 Анна Аннушкина. Все права защищены.</p>
     </footer>
 
     <script src="js/script.js" defer></script>

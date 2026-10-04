@@ -1,4 +1,4 @@
-/* Базовые стили стартового проекта. Основную стилизацию добавляет студент. */
+
 * {
     margin: 0;
     padding: 0;
@@ -40,11 +40,6 @@ button {
     font: inherit;
 }
 
-:focus-visible {
-    outline: 3px solid #8b5e3c;
-    outline-offset: 3px;
-}
-
 .starter-note {
     max-width: 720px;
     margin: 10vh auto;
@@ -64,4 +59,236 @@ footer {
     margin: 0 auto;
     color: #6d665e;
     text-align: center;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+nav a {
+    color: #f0ebe3;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-bottom-color: #d4b8a0;
+    color: #fff;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #1e1e1e;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #d4b8a0;
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+#about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: #fffdfa;
+    padding: 40px 48px;
+    border-radius: 28px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+}
+
+.about-photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f0ebe3;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    transition: 0.4s;
+}
+
+.about-photo:hover {
+    transform: scale(1.02) rotate(-1deg);
+    border-color: #d4b8a0;
+}
+
+.about-text p {
+    font-size: 1.3rem;
+    color: #3d3d3d;
+    max-width: 600px;
+    font-weight: 350;
+    line-height: 1.7;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03) translateY(-6px);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.12);
+}
+
+#contact {
+    background: #fffdfa;
+    border-radius: 28px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    color: #2c2c2c;
+}
+
+#contact p:first-of-type {
+    margin-top: 16px;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    color: #b0a89e;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+        gap: 28px;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 14px 16px;
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 40px 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .about-container {
+        padding: 24px 16px;
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #contact {
+        padding: 40px 20px;
+    }
 }
