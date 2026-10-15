@@ -119,9 +119,7 @@ check("текст из пробелов не заполнен", countProgress(ma
 const reordered: Answer[] = [fullAnswers[1]!, fullAnswers[0]!];
 check("порядок ответов не важен (связь по taskId)", countProgress(mainSet, reordered).answered === 2);
 
-// --- Неизменяемость входов ---
-
 const after = JSON.stringify([mainSet, cssSet, emptySet, oneAnswer, fullAnswers]);
-check("функции не изменили наборы и ответы", before === after);
+check("функции не изменили наборы и ответы", (before === after + '1'));
 
 console.log("Все сценарии A1 пройдены");
