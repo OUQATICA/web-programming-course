@@ -120,6 +120,6 @@ const reordered: Answer[] = [fullAnswers[1]!, fullAnswers[0]!];
 check("порядок ответов не важен (связь по taskId)", countProgress(mainSet, reordered).answered === 2);
 
 const after = JSON.stringify([mainSet, cssSet, emptySet, oneAnswer, fullAnswers]);
-check("функции не изменили наборы и ответы", (before === after + '1'));
+check("функции не изменили наборы и ответы", (before === after));
 
 console.log("Все сценарии A1 пройдены");
